@@ -7,7 +7,7 @@
 
 # Installation
 <ol>
-    <li>Make sure You have docker and docker-compose (3.8v file support) installed</li>
+    <li>Make sure You have docker and docker-compose installed (3.8v file support)</li>
     <li>Create local image registry and specify it in Makefile and docker-compose (or use existing one if You have any)</li>
     <li>Run <b>make build</b></li>
     <li>If build completes run <b>make up</b></li>
@@ -70,14 +70,14 @@
     <li>returns Location header set to redirect link</li>
     <li>required fields: <b>int|string postId</b> and <b>string commentContent</b></li>
 </ul>
-<h4>POST /posts/{postId}/comments/{id}</h4>
+<h4>POST /posts/{postId}/comments/{commentId}</h4>
 <ul>
     <li>update specific comment</li>
     <li>Authorization API key, using query param e.g: <b></b></li>
     <li>returns json with redirect link </li>
-    <li>required fields: <b>string postId</b>
+    <li>required fields: <b>int|string postId</b> <b>int|string commentId</b>
 </ul>
-<h4>DELETE /posts/{postId}/comments/{id}</h4>
+<h4>DELETE /posts/{postId}/comments/{commentId}</h4>
 <ul>
     <li>delete specific comment</li>
     <li>Authorization API key, using query param e.g: <b></b></li>
