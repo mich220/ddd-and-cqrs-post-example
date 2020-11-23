@@ -7,7 +7,7 @@ UID     			= $(shell id -u)
 
 ## App makefile
 build:
-	@docker build -t $(APP_IMAGE_REGISTRY) --no-cache --build-arg APP_IMAGE=$(APP_BUILD_IMAGE) --build-arg DEV_UID=$(UID) -f $(APP_DOCKERFILE) .
+	@docker build -t $(APP_IMAGE_REGISTRY) --no-cache --build-arg APP_IMAGE=$(APP_BUILD_IMAGE) --build-arg UID=$(UID) -f $(APP_DOCKERFILE) .
 
 up:
 	@cd ./.docker && $(DOCKER) up -d
