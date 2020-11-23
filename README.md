@@ -27,8 +27,6 @@
 <h4>GET /posts/{id}</h4>
 <ul>
     <li>get specific post</li>
-    <li>if not found -> returns http 404</li>
-    <li>query params: <b>int|string page</b> and <b>int|string limit</b></li>
 </ul>   
 <h4>POST /posts</h4>
 <ul>
